@@ -13,9 +13,11 @@ namespace log_line {
 
     std::string reformat(std::string line) {
         // return the reformatted message
-        std::string message = line.substr(line.find("]")+3);
+        /*std::string message = line.substr(line.find("]")+3);
         std::string level = line.substr(1, line.find("]") - 1);
-        return(message + " (" + level + ")");
+        return(message + " (" + level + ")");*/
+
+        return message(line) + " (" + log_level(line) + ")";
     }
 }
 
