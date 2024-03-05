@@ -3,7 +3,7 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		SpaceAge sa = new SpaceAge(30);
+		SpaceAge sa = new SpaceAge(1000000000);
 
 		System.out.println(sa.onEarth());
 		System.out.println(sa.onMercury());
