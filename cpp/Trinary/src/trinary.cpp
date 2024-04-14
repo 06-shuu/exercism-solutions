@@ -1,6 +1,5 @@
 #include "trinary.h"
 
-
 namespace trinary {
 	int trinary::to_decimal(std::string trinary) {
         int decimal{ 0 }, i{ 0 }, n{ static_cast<int>(trinary.length()) };
