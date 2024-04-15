@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log Analysis", "..\Log Anal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car Assemble", "..\Car Assemle\Car Assemble.csproj", "{77FB8307-22E0-453E-8FAD-C8A1DC3051AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bob", "..\Bob\Bob.csproj", "{123C987F-87E6-479C-B02E-3DAC297CFA03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{77FB8307-22E0-453E-8FAD-C8A1DC3051AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77FB8307-22E0-453E-8FAD-C8A1DC3051AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77FB8307-22E0-453E-8FAD-C8A1DC3051AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{123C987F-87E6-479C-B02E-3DAC297CFA03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{123C987F-87E6-479C-B02E-3DAC297CFA03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{123C987F-87E6-479C-B02E-3DAC297CFA03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{123C987F-87E6-479C-B02E-3DAC297CFA03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
