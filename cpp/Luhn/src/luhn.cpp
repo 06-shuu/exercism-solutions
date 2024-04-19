@@ -4,45 +4,37 @@
 namespace luhn {
 
     bool valid(std::string num) {
-        //to remove white space
-        std::string num1 = num;
-        num1.erase(std::remove_if(num1.begin(), num1.end(), isspace), num1.end());
+        num.erase(std::remove_if(num.begin(), num.end(), [](char c) { return std::isspace(c); }), num.end()); //erase whitespaces 
 
-        const char* characters_array = num1.c_str();
-        std::vector<int> integers;
-
-        int sum = 0;
-
-        for (std::string::size_type i = 0; i < num1.length(); i++) {
-            if ( num1.length() <= 16 || num1.length() > 1) {
-            if (i % 2 == 0  ) {
-                if (pow(characters_array[i], 2))
-                    integers.push_back((pow(characters_array[i], 2) - 9) - '0');
-                else
-                    integers.push_back(pow(characters_array[i], 2 - '0'));
-            }
-           else
-               integers.push_back(characters_array[i] - '0');
-            }
-
-
-            //if (i % 2 == 0)
-            //    sum += pow(integers[i], 2);
-            //else
-            //    sum += integers[i];
+        if (num.length() == 1)
+            return false;
+        std::vector<char> charVec;
+        for (char c : num) {
+            if (isdigit(c))
+                charVec.push_back(c);
+            else return false;
         }
 
-        if (sum % 10 == 0)
-            return true;
+        int sum = 0;
+        int digit;
+        int position = 0;
+        for (std::vector<char>::size_type i = charVec.size(); i > 0; i--) {
+            digit = charVec.at(i - 1) - '0';
+            if (position % 2 != 0) {
+                digit = digit > 4 ? digit * 2 - 9 : digit * 2;
+            }
+            sum += digit;
+            position++;
+        }
 
-        return false;
+        return sum % 10 == 0;
     }
 }  // namespace luhn
 
 int main() {
 
-	luhn::valid("1 1 11");
-
+	
+	std::cout << luhn::valid("4539 3195 0343 6467") << std::endl;
 
 	return 0;
 }
