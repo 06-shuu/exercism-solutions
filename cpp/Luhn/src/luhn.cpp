@@ -11,7 +11,7 @@ namespace luhn {
         std::vector<char> charVec;
         for (char c : num) {
             if (isdigit(c))
-                charVec.push_back(c);
+                charVec.push_back(c); 
             else return false;
         }
 
